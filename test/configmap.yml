@@ -34,4 +34,4 @@ kind: ConfigMap
 metadata:
   labels: {}
   name: jvm
-  namespace: atlantis-jmcintyre
+  namespace: atlantis-cassie
