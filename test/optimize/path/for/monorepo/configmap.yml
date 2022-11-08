@@ -1,0 +1,37 @@
+apiVersion: v1
+data:
+  application.conf: |
+    include "production"
+    include "platform"
+  logback.xml: |
+    <configuration>
+        <include resource="default-logback.xml"/>
+
+        <root level="INFO">
+            <appender-ref ref="STDOUT_JSON"/>
+        </root>
+    </configuration>
+  platform.conf: |
+    hopper: {
+      app: {
+        platform: {
+          zookeeper: "zookeeper.zookeeper.svc.cluster.local:2181"
+          singleton {
+            connect: ${hopper.app.platform.zookeeper}
+            path: "/hopper/singletons"
+          }
+        }
+      }
+
+      # for backwards compatibility
+      platform: {
+        services: {
+          singleton: ${hopper.app.platform.zookeeper}
+        }
+      }
+    }
+kind: ConfigMap
+metadata:
+  labels: {}
+  name: test
+  namespace: cassie-dev
