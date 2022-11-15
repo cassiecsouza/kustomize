@@ -34,4 +34,4 @@ kind: ConfigMap
 metadata:
   labels: {}
   name: jvm
-  namespace: cassie-dev
+  namespace: cassie-prod
