@@ -34,4 +34,4 @@ kind: ConfigMap
 metadata:
   labels: {}
   name: test
-  namespace: cassie-dev
+  namespace: cassie-prod
