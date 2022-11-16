@@ -15,7 +15,7 @@ pushgateway:
   ##
   enabled: true
   
- alertmanager:
-  ## If false, alertmanager will not be installed
-  ##
+alertmanager:
+## If false, alertmanager will not be installed
+##
   enabled: true
