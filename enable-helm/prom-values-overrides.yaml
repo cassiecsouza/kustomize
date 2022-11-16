@@ -18,8 +18,13 @@ pushgateway:
 alertmanager:
 ## If false, alertmanager will not be installed
 ##
-  enabled: false
+  enabled: true
   useClusterRole: false
+
+kubeStateMetrics:
+  ## If false, kube-state-metrics sub-chart will not be installed
+  ##
+  enabled: false
 
 server:
   enabled: false
