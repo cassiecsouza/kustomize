@@ -4,3 +4,18 @@ server:
 
 imagePullSecrets:
 - name: <+secret.getvalue>
+
+nodeExporter:
+  ## If false, node-exporter will not be installed
+  ##
+  enabled: true
+  
+pushgateway:
+  ## If false, pushgateway will not be installed
+  ##
+  enabled: true
+  
+ alertmanager:
+  ## If false, alertmanager will not be installed
+  ##
+  enabled: true
