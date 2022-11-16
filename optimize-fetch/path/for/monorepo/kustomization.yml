@@ -5,3 +5,6 @@ namespace: cassie-prod
 
 resources:
   - configmap.yml
+
+patchesStrategicMerge:
+- patch.yaml
