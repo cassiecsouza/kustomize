@@ -1,0 +1,6 @@
+server:  
+  image:
+    repository: test
+
+imagePullSecrets:
+- name: <+secret.getvalue>
