@@ -8,14 +8,21 @@ imagePullSecrets:
 nodeExporter:
   ## If false, node-exporter will not be installed
   ##
-  enabled: true
+  enabled: false
   
 pushgateway:
   ## If false, pushgateway will not be installed
   ##
-  enabled: true
+  enabled: false
   
 alertmanager:
 ## If false, alertmanager will not be installed
 ##
-  enabled: true
+  enabled: false
+  useClusterRole: false
+
+server:
+  enabled: false
+  useClusterRole: false
+  namespaces:
+    - cassie-dev
