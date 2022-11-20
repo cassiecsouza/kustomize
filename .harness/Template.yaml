@@ -22,7 +22,13 @@ pipeline:
           execution:
             steps:
               - step:
-                  name: Build preparation step
+                  name: Account Level Template
+                  identifier: Account_Level_Template
+                  template:
+                    templateRef: account.test
+                    versionLabel: "0.1"
+              - step:
+                  name: Project Level
                   identifier: Build_preparation_step
                   template:
                     templateRef: Build_Preparation
