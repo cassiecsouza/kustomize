@@ -1,5 +1,5 @@
 pipeline:
-  name: Template
+  name: Templates
   identifier: Template
   projectIdentifier: Demo
   orgIdentifier: default
