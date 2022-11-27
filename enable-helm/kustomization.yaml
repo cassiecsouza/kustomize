@@ -6,5 +6,5 @@ helmCharts:
   repo: https://prometheus-community.github.io/helm-charts
   version: 14.3.0
   releaseName: my-prometheus
-  namespace: cassie-dev
+  namespace: openlending
   valuesFile: prom-values-overrides.yaml
