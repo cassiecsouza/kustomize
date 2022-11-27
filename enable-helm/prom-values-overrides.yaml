@@ -3,7 +3,7 @@ server:
     repository: test
 
 imagePullSecrets:
-- name: <+secret.getvalue>
+- name: <path:secret/data/sample-secret#first-secret>
 
 nodeExporter:
   ## If false, node-exporter will not be installed
@@ -29,5 +29,5 @@ kubeStateMetrics:
 server:
   enabled: false
   useClusterRole: false
-  namespaces:
-    - cassie-dev
+  # namespaces:
+  #  - cassie-dev
